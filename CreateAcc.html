@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Projeto DevWeb - Página de Busca</title>
+
+	<link rel="stylesheet" href="CSS/Style.css" />
+	<link rel="stylesheet" href="CSS/Normalize.css"/>
+	<link rel="stylesheet" href="CSS/FitScreen.css"/>
+
+	<link href="http://fonts.cdnfonts.com/css/ar-blanca" rel="stylesheet"> <!--https://www.cdnfonts.com/ar-blanca.font -->
+	<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<header class="sticky">
+		
+		<a href="Index.html"><img src="Images/logo.png"></a>
+		<h1 class="logo">GoodTaste</h1>
+
+		<div class="menu">
+			<a href="Search.html" class="itemMenu">BUSCAR RECEITA</a>
+			<a href="PostRecipe.html" class="itemMenu">POSTAR RECEITA</a>
+			<a href="CreateAcc.html" class="itemMenu">CRIAR CONTA</a>
+		</div>
+
+		<div class="login">
+			<form id="Login">
+				<input id="UserInput" type="text" placeholder="Usuário" name="user">
+				<input id="PswInput" type="password" placeholder="Senha" name="pass">
+				<button id="LoginBtn"  type="button">Login</button>
+			</form>
+			
+			<p id="UsernameTxt">Username</p>
+			<p id="Sair">Sair</p>
+
+		</div>
+	</header>
+
+	<section>
+		
+		<div class="innerBlock cAccInfo">
+			<h2>Criar Conta</h2>
+			<div class="innerBlock">
+				<p>
+					&emsp;
+					Bem vindo ao Good Taste!
+					<br><br>&emsp;
+					Aqui você pode criar a sua conta 
+					informando as informações requisitadas abaixo.
+					<br><br>&emsp;
+					Com uma conta você pode compartilhar conosco as suas receitas
+					contribuindo com o site e com todos os usuários!
+				</p>
+			</div>
+		</div>
+
+		<div class="innerBlock cAccInputs">
+
+			<div class="innerBlock">
+				<label for="user">Usuário:</label>
+        			<input id="User_" type="text" placeholder="Usuário" name="user" />
+			</div>
+
+			<div class="innerBlock">
+				<label for="nickname">Apelido:</label>
+        			<input id="Nick_" type="text" placeholder="Apelido" name="nickname" />
+			</div>
+			
+			<div class="innerBlock">
+				<label for="password">Senha:</label>
+        			<input id="Psw_" type="password" placeholder="Senha" name="password" />
+			</div>
+
+			<div class="innerBlock">
+				<label for="conf_password">Confirmar Senha:</label>
+        			<input id="Conf_Psw_" type="password" placeholder="Confirmar Senha" name="conf_password" />
+			</div>
+		
+			<div>
+				<button id="CreateAccBtn"  type="button">Criar Conta</button>
+			</div>
+			
+		</div>
+
+
+
+	</section>
+
+	<footer>
+		<p>&copy; 2021 - GoodTaste</p>
+	</footer>
+
+	<script src="JS/SetBackgroundImg.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="JS/SearchList.js"></script>
+	<script src="JS/Login.js"></script>
+	<script src="JS/CreateAcc.js"></script>
+	
+</body>
+</html>

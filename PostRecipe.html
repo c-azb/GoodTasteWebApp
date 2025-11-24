@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Projeto DevWeb - Página de Busca</title>
+
+	<link rel="stylesheet" href="CSS/Style.css" />
+	<link rel="stylesheet" href="CSS/Normalize.css"/>
+	<link rel="stylesheet" href="CSS/FitScreen.css"/>
+
+	<link href="http://fonts.cdnfonts.com/css/ar-blanca" rel="stylesheet"> <!--https://www.cdnfonts.com/ar-blanca.font -->
+	<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<header class="sticky">
+		
+		<a href="Index.html"><img src="Images/logo.png"></a>
+		<h1 class="logo">GoodTaste</h1>
+
+		<div class="menu">
+			<a href="Search.html" class="itemMenu">BUSCAR RECEITA</a>
+			<a href="PostRecipe.html" class="itemMenu">POSTAR RECEITA</a>
+			<a href="CreateAcc.html" class="itemMenu">CRIAR CONTA</a>
+		</div>
+
+		<div class="login">
+			<form id="Login">
+				<input id="UserInput" type="text" placeholder="Usuário" name="user">
+				<input id="PswInput" type="password" placeholder="Senha" name="pass">
+				<button id="LoginBtn"  type="button">Login</button>
+			</form>
+			
+			<p id="UsernameTxt">Username</p>
+			<p id="Sair">Sair</p>
+
+		</div>
+	</header>
+
+	<section>
+		
+		<div class="innerBlock">
+			<h2>Postar Receita</h2>
+		</div>
+
+		<div class = "innerBlock postRecipe">
+
+			<label for="title">Título:</label>
+			<input id="titRec" type="text" placeholder="Título" name="title">
+
+			<label for="desc">Descrição:</label>
+			<textarea id="descRec" placeholder="Descrição" name="desc"></textarea>
+
+			<div class = "innerBlock">
+				<label for="ing">Ingredientes:</label>
+
+				<div id="ingsBlock">
+					<input id="ing1" type="text" placeholder="Ingrediente" name="ing">
+				</div>
+
+				<button id="AddIngBtn"  type="button">Adicionar Ingrediente</button>
+				<button id="RemoveIngBtn"  type="button">Remover Ingrediente</button>
+			</div>
+
+			<label for="method">Modo de preparo:</label>
+			<textarea id="methodRec" placeholder="Modo de Preparo" name="method"></textarea>
+
+			<label for="obs">Observações:</label>
+			<textarea id="obsRec" placeholder="Observações" name="obs"></textarea>
+
+			<button id="PostRecipeBtn"  type="button">Postar Receita</button>
+
+		</div>
+
+	</section>
+
+	<footer>
+		<p>&copy; 2021 - GoodTaste</p>
+	</footer>
+	
+
+	<script src="JS/SetBackgroundImg.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="JS/Login.js"></script>
+	<script src="JS/PostRecipe.js"></script>
+
+</body>
+</html>

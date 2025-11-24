@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Projeto DevWeb - Página de Busca</title>
+
+	<link rel="stylesheet" href="CSS/Style.css" />
+	<link rel="stylesheet" href="CSS/Normalize.css"/>
+	<link rel="stylesheet" href="CSS/FitScreen.css"/>
+
+	<link href="http://fonts.cdnfonts.com/css/ar-blanca" rel="stylesheet"> <!--https://www.cdnfonts.com/ar-blanca.font -->
+	<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@600&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+
+	<header class="sticky">
+		
+		<a href="Index.html"><img src="Images/logo.png"></a>
+		<h1 class="logo">GoodTaste</h1>
+
+		<div class="menu">
+			<a href="Search.html" class="itemMenu">BUSCAR RECEITA</a>
+			<a href="PostRecipe.html" class="itemMenu">POSTAR RECEITA</a>
+			<a href="CreateAcc.html" class="itemMenu">CRIAR CONTA</a>
+		</div>
+
+		<div class="login">
+			<form id="Login">
+				<input id="UserInput" type="text" placeholder="Usuário" name="user">
+				<input id="PswInput" type="password" placeholder="Senha" name="pass">
+				<button id="LoginBtn"  type="button">Login</button>
+			</form>
+			
+			<p id="UsernameTxt">Username</p>
+			<p id="Sair">Sair</p>
+
+		</div>
+	</header>
+
+	<section>
+		
+		<div class="line">
+			<div class="contentBlock2Col col">
+				<h2>Bem vindo ao Good Taste!</h2>
+				<p class="innerBlock">
+				&emsp;
+				Aqui você consegue encontrar uma grande variedade de receitas culinárias para todos
+				os gostos!! 
+				<br><br>
+				&emsp;
+				Com poucos clicks você consegue encontrar a receita que tanto busca para 
+				incrementar o seu arsenal de receitas, leve o seu almoço, janta e lanches 
+				para um outro nível!!
+				<br><br>
+				&emsp;
+				Tudo isso é possível graças a contribuição de todos, cada um compartilhando um 
+				pouco do seu conhecimento sobre receitas alimentícias, por isso você também é 
+				convidado de além de buscar por diferentes receitas, também compartilhar um pouco
+				do seu conhecimento conosco!!
+				
+				</p>
+			</div>
+			<div class="contentBlock2Col col">
+				<h2>Informe-se</h2>
+				<p class="innerBlock">
+					&emsp;
+					Para criar uma conta basta você acessar a opção no menu CIRAR CONTA ou clicar 
+					<a href="CreateAcc.html">aqui</a>, informando as informações requisitadas.
+					<br><br>
+					&emsp;
+					Busque por uma receita na opção BUSCAR RECEITA ou clicando 
+					<a href="Search.html">aqui.</a>
+					<br><br>
+					&emsp;
+					Para postar uma receita você precisa ter uma conta e estar logado na mesma,
+ 					crie uma conta <a href="CreateAcc.html">aqui</a> e/ou poste uma receita 
+					<a href="PostRecipe.html">aqui.</a>
+				</p>
+				
+			</div>
+		</div>
+
+
+		<h2 class="topJoinBlock" >&emsp;&emsp;&emsp;Receitas Recentes</h2>
+
+		
+	
+		<div class="recipeList" id="RecipeList"> </div>
+	
+	</section>
+
+	<footer>
+		<p>&copy; 2021 - GoodTaste</p>
+	</footer>
+
+
+	<script src="JS/SetBackgroundImg.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="JS/SearchList.js"></script>
+	<script src="JS/Login.js"></script>
+	
+</body>
+</html>

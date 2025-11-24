@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Projeto DevWeb - Página de Busca</title>
+
+	<link rel="stylesheet" href="CSS/Style.css" />
+	<link rel="stylesheet" href="CSS/Search.css" />
+	<link rel="stylesheet" href="CSS/Normalize.css"/>
+	<link rel="stylesheet" href="CSS/FitScreen.css"/>
+
+	<link href="http://fonts.cdnfonts.com/css/ar-blanca" rel="stylesheet"> <!--https://www.cdnfonts.com/ar-blanca.font -->
+	<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<header class="sticky">
+		
+		<a href="Index.html"><img src="Images/logo.png"></a>
+		<h1 class="logo">GoodTaste</h1>
+
+		<div class="menu">
+			<a href="Search.html">BUSCAR RECEITA</a>
+			<a href="PostRecipe.html">POSTAR RECEITA</a>
+			<a href="CreateAcc.html">CRIAR CONTA</a>
+		</div>
+
+		<div class="login">
+			<form id="Login">
+				<input id="UserInput" type="text" placeholder="Usuário" name="user">
+				<input id="PswInput" type="password" placeholder="Senha" name="pass">
+				<button id="LoginBtn"  type="button">Login</button>
+			</form>
+			
+			<p id="UsernameTxt">Username</p>
+			<p id="Sair">Sair</p>
+
+		</div>
+	</header>
+
+	<section>
+		<div class="searchBar">
+			<input type="text" placeholder="Buscar..." id="searchInput"><button id="searchBtn">Buscar</button>
+		</div>
+
+		<div class="recipeList" id="RecipeList"> </div>
+	</section>
+
+	<footer>
+		<p>&copy; 2021 - GoodTaste</p>
+	</footer>
+	
+	<script src="JS/SetBackgroundImg.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="JS/SearchList.js"></script>
+	<script src="JS/Login.js"></script>
+	
+	
+</body>
+</html>

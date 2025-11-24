@@ -1,0 +1,77 @@
+
+/****************************/
+/*Fit screen*//*https://www.codeproject.com/Articles/762201/Adjusting-your-Websites-to-Fit-all-Types-of-Resolu*/
+/***************************/
+
+footer, header,body
+{
+	width: 100%;
+	height:auto;
+}
+
+section
+{
+	width:90%; 
+	height:auto;
+}
+
+@media all and (max-width: 1395px) 
+{
+	.menu {margin: 15px 0 0 2vw;}
+	header h1{margin: 10px 0px 0px 1vw;}
+	.cAccInputs input{margin-right:26vw;}
+}
+
+@media all and (max-width: 1295px) 
+{
+   	header h1 { display: none;visibility: hidden;margin:0;padding:0;}
+	#UsernameTxt,#Sair{font-size:16px;}	
+	.cAccInputs input{margin-right:24vw;}
+}
+
+@media all and (max-width: 1140px) 
+{
+	.menu{font-size:15px;margin: 15px 0px 0px 1.5vw;}
+	.login {margin: 15px 1vw 0 1vw;} 
+	.login input[type=text],.login input[type=password] {font-size:15px;padding:4px;}
+	.login button{font-size:15px;padding:4px 8px;margin-left:6px;}
+	#UsernameTxt,#Sair{font-size:14px;}	    
+	header img{width:70px;}
+	.cAccInputs input{margin-right:20vw;}
+}
+
+@media all and (max-width: 910px) 
+{
+	.menu{font-size:15px;margin: 8px 0px 0px 1vw;padding:8px;}
+	.login {margin: 8px 1vw 0 1vw; padding:5px}
+	.login input[type=text],.login input[type=password] {font-size:15px;padding:3px;}
+	.login button{font-size:15px;padding:3px 4px;margin-left:4px;}
+	header img{width:50px;}
+	#UsernameTxt,#Sair{font-size:13px;}	
+	.cAccInputs input{margin-right:18vw;}
+}
+
+@media all and (max-width: 860px) 
+{ 
+	.menu{padding:6px;}
+	.login {padding:3px;}
+	.cAccInputs input{margin-right:15vw;}
+}
+
+@media all and (max-width: 855px)
+{
+	.menu {margin:0 0 0 4%;padding:4px;}
+	.menu a{padding:2px 15px;}
+	.login {margin:0 0 0 4%;float:left;}
+	header img{width:57px;}
+	.cAccInputs input{margin-right:2vw;}
+}
+
+@media all and (max-width: 515px) 
+{
+	.menu{margin:0 0 0 .7vw;}
+	.login {margin:auto auto 0 .7vw;}
+	.cAccInputs input{margin-right:0;}
+}
+
+

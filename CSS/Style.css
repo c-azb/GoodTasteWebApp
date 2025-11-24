@@ -1,0 +1,423 @@
+
+/****************/
+/*Scroll Bar*/
+/****************/
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(200,200,200);
+  border-radius: 5px;
+  box-shadow: inset 0 0 3px black;
+}
+::-webkit-scrollbar-thumb:hover {
+   box-shadow: inset 0 0 5px black;
+}
+
+/**************************/
+/*Cabecalho*/
+/**************************/
+
+header {
+	//height: 80px; //5vw;
+	padding: 8px; //0.45vw; 
+	background-color: rgba(90,90,90,.95);
+	display: block;
+	justify-content: start;
+	font-family: 'AR BLANCA', sans-serif;
+	box-shadow: 1px 1px 5px 1px rgba(0, 0, 0,.4); /* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
+.sticky {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.sticky + section {
+	padding-top: 105px; //8vw; 
+}
+
+header img {
+	width: 80px; //5vw; 
+	float: left;
+	border-radius: 50%;
+}
+
+header img:hover {
+	box-shadow: 3px 3px 5px 3px rgba(0, 0, 0,.2);/* offset-x | offset-y | blur-radius | spread-radius | color */
+	cursor: pointer;
+}
+
+header h1 {
+	float: left;
+	margin: 10px 0px 0px 3vw;//10px 0px 0px 50px; //0.6vw 0 0 3vw; 
+	font-size: 50px; //3.3vw; 
+	animation: blink 12s infinite;
+}
+
+@keyframes blink {
+    0% {color:rgb(245,245,245);}  
+    50% {color: rgb(200,240,170);}
+	100% {color: rgb(245,245,245);}
+}
+
+.menu {
+	font-size: 20px; //1.24vw; 
+	margin: 15px 0px 0px 6vw;  //15px 0px 0px 120px; //1.3vw 0 0 7vw; 
+	padding: 10px; //0.5vw; 
+	float: left;
+	background-color: rgb(160,160,160);
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+.menu a {
+	padding: 5px 20px; //0.5vw 1vw; 
+	text-decoration: none;
+	color: rgb(245,245,245);
+	font-weight: bolder;
+	border-radius: 5px;
+}
+
+.menu a:hover{
+	background-color: rgba(0,0,0,0.2);
+}
+
+.login {
+	float: right;
+	padding: 6px 10px; //0.3vw 0.9vw;
+	margin: 15px 2vw 0 2vw;//15px 30px; // 1.3vw 4vw 0 0vw;
+	background-color: rgb(160,160,160);
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+.login input[type=text],.login input[type=password] {
+	padding: 6px; //0.4vw;
+	border: none;
+	width: 120px; //7vw;
+	margin:auto;
+	color: #555;
+	font-size: 18px; //1.1vw;
+	font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	border-radius: 3px;
+}
+
+.login button {
+	padding: 6px 10px; //0.4vw 0.6vw;
+  	margin-left: 8px; //0.4vw;
+  	background-color: white;
+  	color: #555;
+  	border: none;
+	border-radius: 3px;
+  	font-weight:bold;
+ 	font-size:18px; //1.1vw;
+  	font-family: 'AR BLANCA', sans-serif;
+}
+
+#UsernameTxt,#Sair
+{
+	color: rgb(30,30,30);
+	margin: 0;
+	text-align:center;
+	font-size:18px;
+	font-weight:bold;
+}
+#Sair{text-decoration:underline;font-weight:100;}
+#Sair:hover
+{
+	font-weight:bold;
+	color:rgb(50,50,90);
+	cursor:pointer;
+}
+
+
+/**************************/
+/*Rodape*/
+/**************************/
+
+footer {
+	background-color: rgb(100,105,105);
+	text-align: center;
+	font-family: 'Gluten', cursive;
+	padding: 1px 0;
+
+ 	position: absolute; bottom: 0; /*Keeps footer on botton*/
+}
+
+footer p{
+	color:white;
+	font-weight:bold;
+	text-decoration:underline;
+}
+
+html {height: 100%;box-sizing: border-box;}
+*,*:before,*:after {box-sizing: inherit;} /*Keeps footer on botton when scrolls*/
+body{					  /*Keeps footer on botton*/
+	min-height: 100%;
+	position: absolute;
+}
+
+
+/**************************/
+/*Conteudo*/
+/**************************/
+
+
+
+section 
+{
+	font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	margin: 0px auto 80px auto;
+}
+section p
+{
+	text-align: justify;
+	font-size: 20px;
+}
+
+section h2
+{
+	font-size: 28px;
+	margin-top:.8vw;
+}
+
+.contentBlock2Col h2
+{
+	text-align: center;
+}
+
+.login button:hover,.searchBar button:hover
+{
+	background-color: rgb(240,240,240);
+	cursor: pointer;
+}
+
+.line
+{
+	width:100%;
+	margin: 0 auto;
+	padding: 0.4vw 0;//5px 0;
+	height:auto;
+}
+
+.col
+{
+	padding: 0 .7vw;//0 20px;
+	float: left;
+	margin: .5vw .25vw;//10px 5px;
+}
+
+.contentBlock2Col
+{
+	background-color: rgba(235,235,235,0.7);
+	width:49%;
+	border-radius: 10px;
+}
+
+.innerBlock
+{
+	background-color: rgba(230,230,230,0.7);
+	border: 1px solid rgba(20,20,20,0.7);
+	padding: 20px;
+	border-radius: 10px;
+}
+
+
+.topJoinBlock
+{
+	background-color: rgba(230,230,230,0.8);
+	border: 1px solid rgba(20,20,20,0.8);
+	border-radius: 10px 10px 0 0;
+	margin:10px 0 0 0;
+	padding:10px;
+	width:100%;
+	float:left;
+}
+
+.cAccInfo
+{
+	width:100%;
+	margin: 40px auto 30px auto;
+	font-weight:bold;
+}
+.cAccInfo p
+{
+	margin:0;
+	color:rgb(20,20,50);
+}
+.cAccInfo h2
+{
+	margin-top:0;
+}
+
+.cAccInputs
+{
+	width:95%;
+	margin: auto;
+}
+
+.cAccInputs div
+{
+	display:block;
+	margin:10px;
+}
+
+.cAccInputs label
+{	
+	color: rgb(0,0,0);
+	font-weight:bold;
+	font-size: 18px; //1.1vw;
+}
+
+.cAccInputs input
+{
+	width: 50%;
+	padding: 6px;
+	float:right;
+	margin-right:28vw;
+	margin-top:-7px;
+}
+
+.postRecipe input, .postRecipe textarea,.cAccInputs input
+{
+	border-radius: 5px;
+	border: 1px solid rgb(20,20,20);
+	font-size: 18px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;	
+}
+
+.cAccInputs button, .postRecipe button
+{
+	padding: 6px 10px;
+	border: 1px solid rgb(10,10,10);
+  	color: rgb(50,50,50);
+	border-radius: 5px;
+  	font-weight:bold;
+ 	font-size:18px;
+	margin-top: 10px;
+}
+
+.cAccInputs button:hover,.postRecipe button:hover
+{
+	background-color:rgb(230,230,230);
+	cursor:pointer;
+}
+
+.postRecipe input, .postRecipe textarea,.postRecipe label,.postRecipe button
+{
+	display:block;
+}
+
+.postRecipe button
+{
+	margin-left:.5vw;
+}
+
+.postRecipe label
+{
+	display:inline-block;
+	font-weight:bold;
+	margin:10px 0 10px .5vw;
+	font-size:20px;
+}
+
+.postRecipe input, .postRecipe textarea
+{
+	margin:10px 0 20px .5vw;
+	padding:8px;
+	width: 80%;
+}
+
+.postRecipe textarea
+{
+	resize:none;
+	height: 200px;
+}
+
+.postRecipe .innerBlock
+{
+	margin: 10px 0;
+}
+
+.postRecipe .innerBlock button
+{
+	display:inline !important;
+}
+
+#AddIngBtn{
+	background-color:rgb(200,255,200);
+}
+#RemoveIngBtn{
+	background-color:rgb(255,200,200);
+}
+
+#AddIngBtn:hover{
+	background-color:rgb(180,250,180);
+}
+#RemoveIngBtn:hover{
+	background-color:rgb(250,180,180);
+}
+
+/**Search list and items***/
+.recipeList { 
+	height: 600px;
+	width:100%;
+	background-color: rgba(230,230,230,0.5);
+	border-radius: 3px;
+	border: 1px solid rgba(20,20,20,0.6);
+	margin-top: 15px; //1.5vw; 
+	overflow: hidden;
+}
+
+.recipeList:hover{
+	overflow:auto;
+}
+
+.searchItem {
+	width: 98%;
+	margin: 10px auto; //1vw auto; 
+	border: 2px solid rgba(80,80,80,0.9);
+	border-radius: 10px;
+	background-color: rgba(210,210,210,0.7);
+	padding: 20px 10px; //1.5vw; 
+}
+
+.tituloItmList, .autorItmList, #RecipeTitle,#RecipeAutor {
+	display: inline;//margin: .1vw .1vw .5vw 1fw;20px;
+}
+
+.tituloItmList, #RecipeTitle {
+	font-size: 30px; //2vw;
+	color: rgb(10,10,55);
+	font-weight: bold;
+	border-radius: 10px;
+}
+
+.tituloItmList:hover {
+	color: rgb(10,60,150);
+	cursor: pointer;
+	font-size: 31px; //2.1vw;
+}
+
+.autorItmList,#RecipeAutor {
+	font-size: 20px; //1.2vw; 
+	color: rgb(20,20,60);
+	float:right;
+	text-decoration:underline;
+}
+
+.descItmList {
+	font-size: 18px; //1.1vw; 
+	font-style: italic;
+	margin: 20px 10px 10px 10px; //1vw .5vw .5vw .5vw; 
+}
+
+
+
