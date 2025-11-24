@@ -1,0 +1,60 @@
+#drop schema public cascade;
+#create schema public;
+
+create table if not exists User_(
+	id integer auto_increment not null,
+	userName varchar(20) not null,
+	psw varchar(20) not null,
+	nickname varchar(20) not null,
+
+	constraint uId_uc unique key (userName),
+	constraint user_pk primary key (id)
+);
+
+create table if not exists Recipe(
+
+	id integer not null AUTO_INCREMENT,
+	userId integer not null,
+	title varchar(20) not null,
+	description varchar(100) not null,
+	method varchar(10000) not null,
+	obs varchar(100) not null,
+	recipeDate datetime default CURRENT_TIMESTAMP,
+
+	constraint recipe_pk primary key (id),
+	constraint recipe_fk foreign key(userId) references User_(id)
+);
+
+create table if not exists Ingredient(
+	id integer not null AUTO_INCREMENT,
+	recipeId integer not null,
+	ingredient varchar(50) not null,
+
+	constraint ingredient_pk primary key (id),
+	constraint recipe_fk foreign key(recipeId) references Recipe(id)
+);
+
+##########################
+###Insert user###
+
+insert into User_ (userName,psw,nickname) values ('userName','psw','nickname');
+
+###Select User###
+
+select * from User_ u where u.userName = 'userName' and u.psw = 'psw';
+
+##Insert Recipe##
+
+insert into Recipe (userId,title,description,method,obs) values (userId,'title','description','method','obs');
+
+->foreach ingredient:
+	insert into Ingredient (recipeId,ingredient) values (recipeId,'ingredient');
+
+##Select Recipe##
+select r.*,u.nickname from Recipe r inner join User_ u on r.userId = u.id and 
+(r.title like '%searchContent%' or r.description like '%searchContent%' 
+or r.method like '%searchContent%' or r.obs like '%searchContent%');
+
+select i.ingredient from Ingredient i inner join Recipe r on i.recipeId = r.id and r.id = id;
+
+
